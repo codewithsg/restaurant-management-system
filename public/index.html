@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Automation Api Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="text-center my-4">Restaurant Automation Api Documentation</h2>
+
+    <p class="mb-4">Root URL : <span
+        class="highlight">http://restaurantmanagementapi-env.eba-eujhhwnw.ap-south-1.elasticbeanstalk.com/api</span></p>
+
+    <h3 class="mb-4">API ENDPOINTS</h3>
+
+
+    <div class="accordion" id="accordionExample">
+
+
+      <!-- Restaurant  -->
+      <div class="card">
+        <div class="card-header" id="headingEleven">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEleven"
+              aria-expanded="true" aria-controls="collapseFive">
+              Restaurant Endpoints
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseEleven" class="collapse hide" aria-labelledby="headingEleven" data-parent="#accordionExample">
+          <div class="card-body">
+            <h6>Get All Restaurant</h6>
+            <h6 class="font-weight-normal">endpoint : /restaurant</h6>
+            <h6 class="font-weight-normal">method : GET</h6>
+            <h6 class="font-weight-normal">permissions : no authentication required</h6>
+          </div>
+        </div>
+      </div>
+      <!-- Restaurant -->
+
+      <!-- user api docs -->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              User Management
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <h6>User Related Constants</h6>
+            <h6 class="font-weight-normal">endpoint : /constants/user</h6>
+            <h6 class="font-weight-normal">method : GET</h6>
+          </div>
+          <div class="card-body">
+            <h6>Create New User</h6>
+            <h6 class="font-weight-normal">endpoint : /user</h6>
+            <h6 class="font-weight-normal">method : POST</h6>
+            <h6 class="font-weight-normal">permissions : [ 'owner' ]</h6>
+            <h6 class="font-weight-normal" style="color: chocolate;">Request Body</h6>
+            <img src='./images/createUser.PNG' />
+          </div>
+          <div class="card-body">
+            <h6>Get All Users Of Restaurant</h6>
+            <h6 class="font-weight-normal">endpoint : /user</h6>
+            <h6 class="font-weight-normal">method : GET</h6>
+            <h6 class="font-weight-normal">permissions : [ 'owner' ]</h6>
+          </div>
+          <div class="card-body">
+            <h6>Update User</h6>
+            <h6 class="font-weight-normal">endpoint : /user</h6>
+            <h6 class="font-weight-normal">method : PUT</h6>
+            <h6 class="font-weight-normal">permissions : [ 'owner' ]</h6>
+            <h6 class="font-weight-normal" style="color: chocolate;">Request Body</h6>
+            <img src='./images/updateUser.PNG' />
+          </div>
+          <div class="card-body">
+            <h6>Delete User</h6>
+            <h6 class="font-weight-normal">endpoint : /user/:userId</h6>
+            <h6 class="font-weight-normal">method : DELETE</h6>
+            <h6 class="font-weight-normal">permissions : [ 'owner' ]</h6>
+          </div>
+          <div class="card-body">
+            <h6>Get Current User</h6>
+            <h6 class="font-weight-normal">endpoint : /user/currentUser</h6>
+            <h6 class="font-weight-normal">method : GET</h6>
+            <h6 class="font-weight-normal">permissions : [ 'owner' ]</h6>
+          </div>
+          <div class="card-body">
+            <h6>Get Vendors of Restaurant</h6>
+            <h6 class="font-weight-normal">endpoint : /user/vendors</h6>
+            <h6 class="font-weight-normal">method : GET</h6>
+            <h6 class="font-weight-normal">permissions : [ 'owner','inventoryManager' ]</h6>
+          </div>
+        </div>
+      </div>
+      <!-- user api docs -->
+
+      <!-- authentication api docs -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="true" aria-controls="collapseTwo">
+              Authentication and Authorization
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseTwo" class="collapse hide" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <h6>User Login</h6>
+            <h6 class="font-weight-normal">endpoint : /auth/login</h6>
+            <h6 class="font-weight-normal">method : POST</h6>
+            <h6 class="font-weight-normal">permissions : ALL</h6>
+            <h6 class="font-weight-normal" style="color: chocolate;">Request Body</h6>
+            <img src='./images/Login.PNG' />
+          </div>
+        </div>
+      </div>
+      <!-- authentication api docs -->
+
+      <!-- inventory category api docs -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="true" aria-controls="collapseThree">
+              Inventory Category Management
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseThree" class="collapse hide" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <h6>Create New Inventory Category</h6>
+            <h6 class="font-weight-normal">endpoint : /inventory_category</h6>
+            <h6 class="font-weight-normal">method : POST</h6>
+            <h6 class="font-weight-normal">permissions : [ 'inventoryManager' , 'owner' ]</h6>
+            <h6 class="font-weight-normal" style="color: chocolate;">Request Body</h6>
+            <img src='./images/createInventoryCategory.PNG' />
+          </div>
+          <div class="card-body">
+            <h6>Get All Inventory Category</h6>
+            <h6 class="font-weight-normal">endpoint : /inventory_category</h6>
+            <h6 class="font-weight-normal">method : GET</h6>
+            <h6 class="font-weight-normal">permissions : [ 'inventoryManager' , 'owner' ]</h6>
+          </div>
+          <div class="card-body">
+            <h6>Update Inventory Category</h6>
+            <h6 class="font-weight-normal">endpoint : /inventory_category</h6>
+            <h6 class="font-weight-normal">method : PUT</h6>
+            <h6 class="font-weight-normal">permissions : [ 'inventoryManager' , 'owner' ]</h6>
+            <h6 class="font-weight-normal" style="color: chocolate;">Request Body</h6>
+            <img src='./images/updateInventoryCategory.PNG' />
+          </div>
+        </div>
+      </div>
+      <!-- inventory category api docs-->
+
+      <!-- inventory item api docs -->
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="true" aria-controls="collapseFour">
+              Inventory Item Management
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseFour" class="collapse hide" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            <h6>Stock Inventory Items</h6>
+            <h6 class="font-weight-normal">endpoint : /inventory_item/stock</h6>
+            <h6 class="font-weight-normal">method : POST</h6>
+            <h6 class="font-weight-normal">permissions : [ 'inventoryManager' , 'owner' ]</h6>
+            <h6 class="font-weight-normal" style="color: chocolate;">Request Body</h6>
+            <img src='./images/restock.PNG' />
+          </div>
+          <div class="card-body">
+            <h6>Get Inventory Items By Category</h6>
+            <h6 class="font-weight-normal">endpoint : /inventory_item</h6>
+            <h6 class="font-weight-normal">method : GET</h6>
+            <h6 class="font-weight-normal">query : category_id</h6>
+            <h6 class="font-weight-normal">permissions : [ 'inventoryManager' , 'owner' ]</h6>
+          </div>
+
+        </div>
+      </div>
+      <!-- inventory item api docs-->
+
+      <!-- inventory item api docs -->
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive"
+              aria-expanded="true" aria-controls="collapseFive">
+              Order Management
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseFive" class="collapse hide" aria-labelledby="headingFive" data-parent="#accordionExample">
+          <div class="card-body">
+            <h6>Create Menu Category</h6>
+            <h6 class="font-weight-normal">endpoint : /menu_category/stock</h6>
+            <h6 class="font-weight-normal">method : POST</h6>
+            <h6 class="font-weight-normal">permissions : [ 'inventoryManager' , 'owner' ]</h6>
+            <h6 class="font-weight-normal" style="color: chocolate;">Request Body</h6>
+            <img src='./images/CreateMenuCategory.PNG' />
+          </div>
+          <div class="card-body">
+            <h6>Get Menu Categories</h6>
+            <h6 class="font-weight-normal">endpoint : /menu_category</h6>
+            <h6 class="font-weight-normal">method : GET</h6>
+            <h6 class="font-weight-normal">query : menu_id</h6>
+          </div>
+
+        </div>
+      </div>
+      <!-- inventory item api docs-->
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

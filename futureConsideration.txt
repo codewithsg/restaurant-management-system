@@ -1,0 +1,3 @@
+1. take care of env variable in production
+2. same user working for multiple restaurants
+3. maybe use otp for restro user login
